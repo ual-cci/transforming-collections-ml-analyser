@@ -1,0 +1,24 @@
+name: tanc-ml-app
+channels:
+  - defaults
+dependencies:
+  - bzip2=1.0.8
+  - ca-certificates=2023.08.22
+  - expat=2.5.0
+  - icu=73.1
+  - libcxx=14.0.6
+  - libffi=3.4.4
+  - libuv=1.44.2
+  - ncurses=6.4
+  - nodejs=18.18.2
+  - openssl=3.0.14
+  - pip=23.3.1
+  - python=3.12.1
+  - readline=8.2
+  - setuptools=68.0.0
+  - sqlite=3.41.2
+  - tk=8.6.12
+  - tzdata=2023c
+  - wheel=0.41.2
+  - xz=5.4.5
+  - zlib=1.2.13

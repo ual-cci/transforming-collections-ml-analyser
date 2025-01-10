@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Switching to branch main"
+git checkout main
+
+echo "Building app"
+npm run build
+
+echo "Deploying files to server"
+rsync -avP build/ exampleuser@mydomain.com:/var/www/mydomain.com/
+echo "Deployment complete"

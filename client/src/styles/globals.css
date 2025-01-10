@@ -1,0 +1,796 @@
+.container{
+  max-width: none;
+  padding-right:0;
+}
+
+th {
+  position:relative;
+  background-color: white;
+  vertical-align: bottom;
+  z-index: 10
+}
+
+main {
+  padding:30px;
+  width:100%;
+}
+
+div:has(> .ps-collapsed) + .page-content{
+  padding:30px 0px;
+  width:calc(100% - 80px);
+  margin-left:80px;
+}
+
+.page-content{
+  position:relative;
+  padding:30px;
+  width:calc(100% - 250px);
+  margin-left:250px;
+  transition:margin,300ms;
+  -webkit-transition:margin,300ms
+}
+
+h2{
+  font-weight:bold
+}
+
+h4{
+  font-size:calc(1rem + .3vw)
+}
+
+.accordion-header button{
+  font-size: calc(1.275rem + .3vw);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+[class^="material-symbols"]{
+  display: inline-flex;
+  vertical-align: middle;
+  font-size:1.2rem;
+  margin:1rem 0.5rem;
+  padding:0;
+}
+
+.robot-icon {
+  color: #0c63e4;
+  margin:0;
+}
+
+.filled{
+  font-variation-settings:
+  'FILL' 1
+}
+
+#status_complete{
+  color:green;
+}
+
+#status_error{
+  color:red;
+}
+
+#error_icon{
+  color:red;
+}
+
+#warning_icon{
+  color:darkorange;
+}
+
+.sidebar-container{
+  position:fixed;
+  z-index:500;
+  height:100%;
+}
+
+.ps-sidebar-container{
+  background-color:lightgrey !important
+}
+
+.sidebar-title{
+  display:inline-block;
+  padding:20px;
+  width:70%;
+}
+
+.sidebar-title h4 {
+  margin:1rem;
+}
+
+.sidebar-expander{
+  width: calc(30% - 40px);
+  display:inline-block;
+  padding: 20px;
+  box-sizing:content-box;
+  vertical-align:top;
+  border: none;
+}
+
+.sidebar-expander span {
+  padding:0;
+  margin:0;
+}
+
+.ps-collapsed .sidebar-title{
+  width:100%;
+}
+
+.ps-collapsed .sidebar-expander{
+  text-align:center;
+  width:100%;
+  padding: 20px 0px;
+}
+
+
+table{
+  width:100%;
+  display:inline-block;
+}
+
+thead{
+  position:sticky;
+  top:0px;
+}
+
+.data-table-row{
+  border-top:2px lightblue solid;
+  border-bottom:2px lightblue solid;
+}
+
+.data-table-row:has(span[id^="grade"] .correct)
+{
+  background-color:rgb(207, 237, 207);
+  border-top:2px white solid;
+  border-bottom:2px white solid;
+}
+
+.data-table-row:has(span[id^="grade"] .average)
+{
+  background-color:rgb(255, 235, 201);
+  border-top:2px white solid;
+  border-bottom:2px white solid;
+}
+
+.data-table-row:has(span[id^="grade"] .incorrect)
+{
+  background-color:rgb(237, 207, 207);
+  border-top:2px white solid;
+  border-bottom:2px white solid;
+}
+
+.data-table-row:has(span[id^="grade"] .filtered)
+{
+  background-color:rgb(243, 231, 255);
+  border-top:2px white solid;
+  border-bottom:2px white solid;
+}
+
+.data-table-row:has(input[id^="exclude"]:checked){
+  background-color: grey;
+  color:white;
+  border-top:2px white solid;
+  border-bottom:2px white solid;
+}
+
+.data-table-row:has(input[id^="exclude"]:checked) div span{
+  height:40px;
+  display:block;
+  overflow:hidden;
+}
+
+.data-table-row mark{
+  padding:0 !important
+}
+
+span[id^="grade"]
+{
+  font-weight:800
+}
+
+.data-table-row td{
+  padding:10px;
+}
+
+table th{
+  background-color: #e7f1ff;
+  box-shadow: inset -2px 0 0 lightblue;
+  background-clip: padding-box;
+  padding:0 10px 0 5px
+}
+
+.table th{
+  background-color: #e7f1ff;
+  border-right: 5px solid transparent;
+}
+
+table th div{
+  width:100%
+}
+
+.click-to-sort{
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:24px;
+  width:100%;
+  z-index:5
+}
+
+table th div input[type="text"]{
+  width:100%
+}
+table th div input[type="number"]{
+  width:auto
+}
+
+.table-controls input{
+  width:50px;
+}
+
+table .current {
+  background-color:lightblue
+}
+
+table .pass {
+  background-color:rgb(207, 237, 207)
+}
+
+span[class^="grade"]
+{
+  font-weight:800;
+  font-size:5rem
+}
+
+.grade-box{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+ul li li::before{
+  content:"✔";
+  margin-right:1rem
+}
+
+ul ul {
+  list-style-type: none;
+}
+
+.feature-box{
+  width:fit-content;
+  background:lightblue;
+  padding:1rem
+}
+
+.feature-box.success{
+  background:rgb(207, 237, 207)
+}
+
+.version-config > *{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.review-page{
+  max-width:800px;
+  float:left
+}
+
+.opacity-05 {
+  opacity: 0.5
+}
+
+.flex {
+  display:flex
+}
+
+.flex-wrap {
+  flex-wrap:wrap
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.spinner-border {
+  width: 1rem;
+  height:1rem;
+  margin:0.5rem;
+}
+
+.soft-warning{
+  color:orange
+}
+
+.message{
+  color:blue
+}
+
+span[id^="example"]{
+  color:blue
+}
+
+span[id^="prediction"]{
+  color:rgb(255, 0, 251)
+}
+
+input[type="checkbox"][id^="sample"]{
+  accent-color: rgb(255, 0, 251);
+}
+
+input[type="checkbox"]:disabled {
+  opacity:0
+}
+
+input[type="checkbox"]:disabled:checked {
+  filter: invert(100%) brightness(5);
+  opacity: 100%
+}
+
+span[id^="rationale"] {
+  font-style:italic
+}
+
+span[id^="label"] {
+  font-style:italic;
+  font-weight:bold
+}
+
+.save-box{
+  position:fixed;
+  top:0;
+  right:0;
+  padding:1rem;
+  background:white;
+  border: lightblue 2px solid
+}
+
+.status-box{
+  position:fixed;
+  top:0;
+  right:0;
+  padding:1rem;
+  background:white;
+  border: lightblue 2px solid;
+  z-index:200
+}
+
+.error-box{
+  position:fixed;
+  bottom:50px;
+  right:0;
+  padding:1rem;
+  background:white;
+  border: red 2px solid;
+  z-index: 200;
+}
+
+.modal-body .warning-box{
+  position:relative;
+  bottom:auto;
+  right:auto;
+}
+
+.warning-box{
+  position:fixed;
+  bottom:50px;
+  right:0;
+  padding:1rem;
+  background:white;
+  border: darkorange 2px solid;
+  z-index:200;
+}
+
+.form-error{
+  color:red;
+  font-weight:bold
+}
+
+.hidden {
+  display:none;
+}
+
+.wide {
+  width:100%
+}
+
+.wide_input {
+  width:100%
+}
+
+p {
+  margin-bottom:0
+}
+
+.float-left{
+  float:left
+}
+
+.float-right{
+  float:right
+}
+
+.clear{
+  clear:both;
+}
+
+.inline{
+  display:inline-block
+}
+
+.margin-10{
+  margin:10px 10px 10px 10px
+}
+
+.label-header{
+  font-weight:bold
+}
+
+.highlighter {
+  background-color: #e06f6f;
+}
+
+span[id^="rationale"] {
+  font-style:italic
+}
+
+span[id^="label"] {
+  font-style:italic;
+  font-weight:bold
+}
+
+.example-selector-config div{
+  display:inline-block;
+}
+
+.example-selector-config span{
+  margin-right:10px
+}
+
+.example-selector-config input{
+  width:100px;
+  margin-left:5px
+}
+
+.example-selector-config select{
+  margin-left:5px
+}
+
+.react-tabs__tab-list{
+  display:flex;
+  width:100%
+}
+
+.react-tabs__tab[aria-disabled=true]{
+  color:lightblue !important
+}
+
+.edit_analyser .react-tabs{
+  width:100%
+}
+
+.react-tabs__tab-list li{
+  flex-grow:1;
+  cursor:pointer
+}
+
+.steps .react-tabs__tab--selected{
+  background-color:purple;
+  color:white;
+  border-radius:0px !important
+}
+
+.steps .react-tabs__tab--disabled:hover{
+  background-color:lightblue;
+  cursor:default
+}
+
+.steps .react-tabs__tab--disabled:hover::after{
+  border-left-color:lightblue
+}
+
+.steps .react-tabs__tab--selected::after{
+  border-left-color:purple;
+}
+
+.steps {
+  padding: 0;
+}
+.steps a {
+  color: white;
+  text-decoration: none;
+}
+.steps em {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.steps li {
+  float: left;
+  margin-left: 0;
+  list-style-type: none;
+  padding: 5px 5px 5px 30px; /* padding around text, last should include arrow width */
+  border-right: 3px solid white; /* width: gap between arrows, color: background of document */
+  position: relative;
+}
+/* remove extra padding on the first object since it doesn't have an arrow to the left */
+.steps li:first-child {
+  padding-left: 5px;
+}
+/* white arrow to the left to "erase" background (starting from the 2nd object) */
+.steps li:nth-child(n+2)::before {
+  position: absolute;
+  top:0;
+  left:-1px;
+  display: block;
+  border-left: 17px solid white; /* width: arrow width, color: background of document */
+  border-top: 17px solid transparent; /* width: half height */
+  border-bottom: 17px solid transparent; /* width: half height */
+  width: 0;
+  height: 0;
+  content: " ";
+}
+/* colored arrow to the right */
+.steps li::after {
+  z-index: 1; /* need to bring this above the next item */
+  position: absolute;
+  top: 0;
+  right: -17px; /* arrow width (negated) */
+  display: block;
+  border-left: 17px solid lightblue; /* width: arrow width */
+  border-top: 17px solid transparent; /* width: half height */
+  border-bottom: 17px solid transparent; /* width: half height */
+  width:0;
+  height:0;
+  content: " ";
+}
+
+/* Setup colors (both the background and the arrow) */
+
+/* Completed */
+.steps li { background-color: lightblue; }
+.steps li::after { border-left-color: lightblue; }
+
+/* Current */
+.steps li.current { background-color: white; }
+.steps li.current::after { border-left-color: white; }
+
+/* Following */
+.steps li.current ~ li { background-color: #EBEBEB; }
+.steps li.current ~ li::after { border-left-color: #EBEBEB; }
+
+/* Hover for completed and current */
+.steps li:hover {
+  color:black;
+  background-color: white
+}
+.steps li:hover::after {
+  border-left-color: white
+}
+
+.wide_input {
+  width:100%
+}
+
+p {
+  margin-bottom:0
+}
+
+.float-right{
+  float:right
+}
+
+.margin-10{
+  margin:10px 10px 10px 10px
+}
+
+.label-header{
+  font-weight:bold
+}
+
+.item-image-thumbnail{
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.item-image{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  max-height: 600px;
+  max-width: 800px;
+}
+
+.item-image-container {
+  position:relative;
+  z-index:5;
+}
+
+.item-image-container button{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color:white
+}
+
+.image-placeholder{
+  width:200px;
+  height:200px;
+  align-items: center;
+  justify-content:center;
+  display:flex;
+  background-color: lightgrey;
+}
+
+.labelset-selector div{
+  margin:10px 0
+}
+
+.footer{
+  position:fixed;
+  bottom:0;
+  left:250px;
+  height:50px;
+  width:calc(100% - 250px);
+  background:purple;
+  z-index:50;
+  align-items: center;
+  padding:10px;
+  transition:left,300ms;
+  -webkit-transition:left,300ms
+}
+
+.single-button{
+  justify-content: flex-end;
+}
+
+.multi-button{
+  justify-content: space-between;
+}
+
+div:has(> .ps-collapsed) + .page-content .footer{
+  left:80px;
+  width:calc(100% - 80px);
+}
+
+input[type="radio"] + label {
+  margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+  .data-table-row td{
+    max-width:300px
+  }
+
+  main{
+    padding:0;
+  }
+
+}
+
+.item-selector-heading{
+  position:sticky;
+  padding-top:20px;
+  top: 0px;
+  width:100vw;
+  height:50px;
+  background-color:white;
+  z-index:50;
+}
+
+.example-selector-config{
+  position:sticky;
+  padding-top:10px;
+  top:45px;
+  width:100%;
+  background-color:white;
+  z-index:50;
+}
+
+.item-selector-select-intro{
+  position:sticky;
+  height:40px;
+  padding-top:10px;
+  padding-bottom:15px;
+  top:45px;
+  width:100vw;
+  background-color:white;
+  z-index:50;
+}
+
+.item-selector-select-info{
+  position:sticky;
+  height:40px;
+  padding-top:10px;
+  padding-bottom:15px;
+  top:78px;
+  width:100vw;
+  background-color:white;
+  z-index:50;
+}
+
+.item-list-view-count{
+  position:sticky;
+  top:45px;
+  width:100vw;
+  height:50px;
+  background-color:white;
+  z-index:50;
+}
+
+.item-list-view-count.expanded{
+  top:115px;
+}
+
+.item-list-view-count.fully-expanded{
+  top:175px;
+}
+
+.item-dynamic-list table thead{
+  top:80px;
+  z-index:50;
+}
+
+.item-dynamic-list table thead.expanded{
+  top:150px;
+}
+
+.item-dynamic-list table thead.fully-expanded{
+  top:210px;
+}
+
+.item-selector-auto-config{
+  padding:10px 0
+}
+
+.info-box{
+  display:inline-block;
+  cursor:pointer;
+  position:relative;
+}
+
+.info-box:hover .info_tooltip{
+  visibility: visible;
+  opacity:1;
+}
+
+.info_tooltip{
+  color:black;
+  position:absolute;
+  top:5px;
+  left:30px;
+  padding:5px 10px;
+  width:250px;
+  background-color: lightblue;
+  border-radius:5px;
+  visibility:hidden;
+  opacity:0;
+  z-index:1;
+}
+
+.info_tooltip::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent lightblue transparent transparent;
+}
+
+.info_tooltip div{
+  width:auto
+}
+
+.info-box span.material-symbols-outlined{
+  margin:0
+}
