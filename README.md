@@ -208,7 +208,7 @@ gunicorn -b 0.0.0.0:8085 -k gevent --workers=12 -e OPENAI_API_TYPE="openai" 'app
 gunicorn -b 0.0.0.0:8080 -k gevent --workers=12 'app:app(model="azure",wandb_toggle=False)' --timeout 600 --preload
 ```
 
-### Useful database commands
+## Useful database commands
 
 If you have deployed the app on a server and want to make a dataset public (available to all users) or share it with specific users (you will need access to their Auth0 IDs for that), you can use the following mongosh commands.
 
@@ -229,7 +229,7 @@ db.dataset.updateOne({name:DATASET_NAME}, {$unset:{"owner":1}})
 db.dataset.updateOne({name:DATASET_NAME},{$set:{"users":[AUTH0_ID_1, AUTH0_ID_2]}})
 ```
 
-### Research materials
+## Research materials
 
 You can find a number of research materials created during the project in the `research-materials` folder.
 
