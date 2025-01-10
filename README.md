@@ -79,7 +79,7 @@ If you already have an Auth0 instance for your organisation please skip to step 
 
 ### AI services
 
-You can choose between three different AI model sources to run the app. 
+You can choose between three different AI model sources to run the app. First, create an .env file in the server folder and follow env.template.
 
 | Model source                                                                                 | OpenAI                          | Azure OpenAI Service                                                                                                                              | Hugging Face                                                                                                                                                |
 |----------------------------------------------------------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
