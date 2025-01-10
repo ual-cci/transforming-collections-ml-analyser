@@ -200,12 +200,12 @@ The following options are available:
 
 #### For OpenAI:
 ```
-gunicorn -b 0.0.0.0:8085 -k gevent --workers=12 -e OPENAI_API_TYPE="openai" 'app:app(model="openai",wandb_toggle=False,port=8085)' --timeout 600 --preload
+gunicorn -b 0.0.0.0:8080 -k gevent --workers=12 'app:app(model="openai",wandb_toggle=False)' --timeout 600 --preload
 ```
 
 #### For Azure:
 ```
-gunicorn -b 0.0.0.0:8080 -k gevent --workers=12 'app:app(model="azure",wandb_toggle=False)' --timeout 600 --preload
+gunicorn -b 0.0.0.0:8085 -k gevent --workers=12 'app:app(model="azure",wandb_toggle=False,port=8085)' --timeout 600 --preload
 ```
 
 ## Useful database commands
